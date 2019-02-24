@@ -1,0 +1,12 @@
+{
+  "name": "component-popularDishes-wf",
+  "version": "1.0.0",
+  "description": "Elite Grub Best way to learn more about a restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
