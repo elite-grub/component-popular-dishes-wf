@@ -2,7 +2,7 @@
 Best way to learn more about a restaurant
 
 ## Related Projects
-Main Repo: https://github.com/elite-grub
+[Main Repo](https://github.com/elite-grub)
 
 ## Table of Contents
 1. [Usage](#Usage)
