@@ -44,7 +44,7 @@ const saveMainRestaurant = () => {
   for (let i = 1; i <= allPhotos.length; i++) {
     const photo = {};
     photo.photoID = i;
-    photo.photoURL = allPhotos[i + 1];
+    photo.photoURL = allPhotos[i - 1];
     links.push(photo);
   }
 
@@ -73,7 +73,7 @@ const saveFakeData = () => {
     for (let i = 1; i <= linkArr.length; i++) {
       const photo = {};
       photo.photoID = i;
-      photo.photoURL = allPhotos[i + 1];
+      photo.photoURL = allPhotos[i - 1];
       links.push(photo);
     }
 
@@ -91,14 +91,14 @@ const saveFakeData = () => {
     .catch(err => console.log(err));
 };
 
-const findRestaurant = (id, callback) => {
+saveMainRestaurant();
+saveFakeData();
+
+const findRestaurant = ({ id }, callback) => {
   Photo.findOne({ id: 1 }, (err, data) => {
     if (err) callback(err);
     callback(null, data);
   });
 };
-
-saveMainRestaurant();
-saveFakeData();
 
 module.exports = { findRestaurant };
