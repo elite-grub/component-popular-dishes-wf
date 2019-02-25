@@ -33,4 +33,4 @@ Open a terminal instance for every service and one for the proxy.
 - Run 'npm start' to start server.
 - Run 'npm run seed' to start database
 - In a browser navigate to localhost:3030/:id
-(ex) For main restaurant information: localhost:3030/:1
+  - (ex) For main restaurant information: localhost:3030/:1
