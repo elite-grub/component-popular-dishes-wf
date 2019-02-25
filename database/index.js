@@ -94,11 +94,26 @@ const saveFakeData = () => {
 saveMainRestaurant();
 saveFakeData();
 
-const findRestaurant = ({ id }, callback) => {
+const findRestaurant = (id, callback) => {
   Photo.findOne({ id: 1 }, (err, data) => {
-    if (err) callback(err);
+    if (err) {
+      callback(err);
+      return;
+    }
     callback(null, data);
   });
 };
+
+// const findRestaurant = (id, callback) => {
+//   Photo.findOne({ id: Photo.id }, (err, data) => {
+//     console.log('DATABASE: ', data);
+//     console.log('DATABASE ID: ', id);
+//     if (err) {
+//       callback(err);
+//       return;
+//     }
+//     callback(null, data);
+//   });
+// };
 
 module.exports = { findRestaurant };
