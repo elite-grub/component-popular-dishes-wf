@@ -9,7 +9,9 @@ db.once('open', () => {
 });
 
 const photoSchema = mongoose.Schema({
-  id: { type: Number, unique: true },
+  id: {
+    type: Number, unique: true, sparse: true, require: true,
+  },
   name: String,
   links: [
     {
@@ -90,7 +92,7 @@ const saveFakeData = () => {
 };
 
 const findRestaurant = (id, callback) => {
-  Photo.findOne({ id }, (err, data) => {
+  Photo.findOne({ id: 1 }, (err, data) => {
     if (err) callback(err);
     callback(null, data);
   });
@@ -99,4 +101,4 @@ const findRestaurant = (id, callback) => {
 saveMainRestaurant();
 saveFakeData();
 
-module.exports.findRestaurant = findRestaurant;
+module.exports = { findRestaurant };
