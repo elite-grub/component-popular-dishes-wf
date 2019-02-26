@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const faker = require('faker');
 
 mongoose.connect('mongodb://localhost/popularDishes', { useNewUrlParser: true });
 
@@ -11,10 +12,12 @@ db.once('open', () => {
 const photoSchema = mongoose.Schema({
   id: Number,
   name: String,
+  menuURL: String,
   links: [
     {
       photoID: Number,
       photoURL: String,
+      // dishURL: String,
     },
   ],
 });
@@ -36,6 +39,11 @@ const allPhotos = [
   'https://s3-us-west-1.amazonaws.com/elite-grub-photos/Screen+Shot+2019-02-24+at+3.29.58+PM.jpg',
 ];
 
+const dishesURL = [
+  'https://www.yelp.com/menu/fog-harbor-fish-house-san-francisco-2/item/award-winning-clam-chowder',
+
+];
+
 const saveMainRestaurant = () => {
   const links = [];
 
@@ -49,6 +57,7 @@ const saveMainRestaurant = () => {
   const MainPhotos = new Photo({
     id: 1,
     name: 'Fog Harbor Fish House',
+    menuURL: 'https://www.yelp.com/menu/fog-harbor-fish-house-san-francisco-2/dinner-menu',
     links,
   });
 
@@ -78,6 +87,7 @@ const saveFakeData = () => {
     const newPhoto = new Photo({
       id,
       name: `Fake Restaurant ${id}`,
+      menuURL: faker.internet.url(),
       links,
     });
 
