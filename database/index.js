@@ -53,14 +53,12 @@ const dishesURL = [
 const saveMainRestaurant = () => {
   const links = [];
 
-  for (let i = 1; i <= allPhotos.length; i++) {
-    for (let j = 1; j <= dishesURL.length; j++) {
-      const photo = {};
-      photo.photoID = i;
-      photo.photoURL = allPhotos[i - 1];
-      photo.dishURL = dishesURL[j - 1];
-      links.push(photo);
-    }
+  for (let i = 1, j = 1; i <= allPhotos.length, j <= dishesURL.length; i++ , j++) {
+    const photo = {};
+    photo.photoID = i;
+    photo.photoURL = allPhotos[i - 1];
+    photo.dishURL = dishesURL[j - 1];
+    links.push(photo);
   }
 
   const MainPhotos = new Photo({
@@ -84,12 +82,14 @@ const saveFakeData = () => {
   for (let id = 2; id <= 100; id++) {
     const randomPhotoNum = Math.ceil(Math.random() * allPhotos.length);
     const linkArr = allPhotos.slice(0, randomPhotoNum);
+    const dishArr = dishesURL.slice(0, randomPhotoNum);
     const links = [];
 
-    for (let i = 1; i <= linkArr.length; i++) {
+    for (let i = 1, j = 1; i <= linkArr.length, j <= dishArr.length; i++ , j++) {
       const photo = {};
       photo.photoID = i;
       photo.photoURL = allPhotos[i - 1];
+      photo.dishURL = dishArr[j - 1];
       links.push(photo);
     }
 
