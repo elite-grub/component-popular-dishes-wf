@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import App from './components/App.jsx';
+
 ReactDOM.render(
-  <h2>Popular Dishes under construction...</h2>, document.getElementById('app'),
+  <App />, document.getElementById('app'),
 );
