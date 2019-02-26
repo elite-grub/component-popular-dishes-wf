@@ -1,0 +1,36 @@
+{
+  "name": "popular_dishes",
+  "version": "1.0.0",
+  "description": "Elite Grub Best way to learn more about a restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack -d -w",
+    "start": "nodemon server/index.js",
+    "seed": "nodemon database/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.15",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
