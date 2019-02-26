@@ -12,8 +12,6 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.get('/popular/:id', (req, res) => {
   const { id } = req.params;
   findRestaurant(id, (err, data) => {
-    console.log('SERVER: ', data);
-    console.log('SERVER ID: ', id);
     if (err) {
       res.sendStatus(400);
       return;
