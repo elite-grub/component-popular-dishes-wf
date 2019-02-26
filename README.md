@@ -31,6 +31,6 @@ Open a terminal instance for every service and one for the proxy.
 - Run 'npm install' for every service and the proxy.
 - Run 'npm run build' for every service to create a bundle.js file.
 - Run 'npm start' to start server.
-- Run 'npm run seed' to start database
-- In a browser navigate to localhost:3030/:id
-  - (ex) For main restaurant information: localhost:3030/:1
+- Run 'npm run seed' to start database.
+  - In a browser navigate to localhost:3030/popular/:id
+  - (ex) For main restaurant information: localhost:3030/popular:1
