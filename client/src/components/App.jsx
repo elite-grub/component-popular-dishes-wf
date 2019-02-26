@@ -1,9 +1,12 @@
 import React from 'react';
 
+import Header from './Header.jsx';
+import ImageCarousel from './ImageCarousel.jsx';
+
 // class App extends React.component {
 //   constructor(props) {
 //     super(props);
-//     this.state = '';
+//     this.state = {};
 //   }
 
 //   render() {
@@ -17,7 +20,8 @@ import React from 'react';
 
 const App = () => (
   <div>
-    <h1>Hello World!</h1>
+    <Header />
+    <ImageCarousel />
   </div>
 );
 
