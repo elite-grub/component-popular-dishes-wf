@@ -13,7 +13,8 @@ const Header = () => (
     </div>
 
     <div className="menu">
-      <a href="https://www.google.com/">View Full Menu Link</a>
+      <a className="menu-link"
+      href="https://www.google.com/">View Full Menu</a>
     </div>
 
     <div className="carousel-nav">

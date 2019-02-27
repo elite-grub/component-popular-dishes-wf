@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './Header.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
 
+import '../../dist/styles.css';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -11,7 +13,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Header />
         <ImageCarousel />
       </div>
