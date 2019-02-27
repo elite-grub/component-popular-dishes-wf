@@ -7,9 +7,16 @@ configure({ adapter: new Adapter() });
 
 describe('DB returns correct information for main restaurant', () => {
   const id = 1;
+
+  it('Should match unique id', (done) => {
+    db.findRestaurant(id, (err, data) => {
+      expect(data.id).toEqual(id);
+      done();
+    });
+  });
+
   it('Should return menu link', (done) => {
     db.findRestaurant(id, (err, data) => {
-      // expect(data.id).toEqual(id);
       expect(data.menuURL).toBe('https://www.yelp.com/menu/fog-harbor-fish-house-san-francisco-2/dinner-menu');
       done();
     });
