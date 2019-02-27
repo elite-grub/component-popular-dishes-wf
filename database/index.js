@@ -14,9 +14,7 @@ db.once('open', () => {
 });
 
 const findRestaurant = (id, callback) => {
-  const newId = id.split(':');
-  const newReqId = Number(newId[1]);
-  Photo.findOne({ id: newReqId }, (err, data) => {
+  Photo.findOne({ id }, (err, data) => {
     if (err) {
       callback(err);
       return;
