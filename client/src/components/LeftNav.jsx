@@ -1,6 +1,6 @@
 import React from 'react';
 
-// class LeftNav extends React.component {
+// class LeftNav extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = {};

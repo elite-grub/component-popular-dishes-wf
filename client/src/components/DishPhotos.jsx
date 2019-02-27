@@ -2,7 +2,7 @@ import React from 'react';
 
 import Dish from './Dish.jsx';
 
-// class DishPhotos extends React.component {
+// class DishPhotos extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = {};

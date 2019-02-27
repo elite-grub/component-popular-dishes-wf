@@ -1,6 +1,6 @@
 import React from 'react';
 
-// class Dish extends React.component {
+// class Dish extends React.Component {
 //   constructor(props) {
 //     super(props);
 //     this.state = {};
