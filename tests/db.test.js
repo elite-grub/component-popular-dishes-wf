@@ -5,21 +5,29 @@ import db from '../database/index';
 
 configure({ adapter: new Adapter() });
 
-// afterAll(() => db.db.close());
-
-describe('DB returns correct information', () => {
-  it('Should return main restaurant menu link', (done) => {
-    db.findRestaurant((err, data) => {
-      const id = ':1';
-      expect(data.id).toEqual(id);
+describe('DB returns correct information for main restaurant', () => {
+  const id = 1;
+  it('Should return menu link', (done) => {
+    db.findRestaurant(id, (err, data) => {
+      // expect(data.id).toEqual(id);
       expect(data.menuURL).toBe('https://www.yelp.com/menu/fog-harbor-fish-house-san-francisco-2/dinner-menu');
       done();
     });
   });
 
-  it('Should return main restaurant name', (done) => {
-    db.findRestaurant((err, data) => {
+  it('Should return restaurant name', (done) => {
+    db.findRestaurant(id, (err, data) => {
       expect(data.name).toBe('Fog Harbor Fish House');
+      done();
+    });
+  });
+});
+
+describe('DB returns fake restaurant data', () => {
+  const id = 2;
+  it('Should return fake data restaurant name', (done) => {
+    db.findRestaurant(id, (err, data) => {
+      expect(data.name).toBe('Fake Restaurant 2');
       done();
     });
   });
