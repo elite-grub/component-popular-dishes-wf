@@ -3,6 +3,8 @@ import React from 'react';
 import LeftNav from './LeftNav.jsx';
 import RightNav from './RightNav.jsx';
 
+import '../../dist/styles.css';
+
 const Header = () => (
   <div className="header">
 
