@@ -3,6 +3,8 @@ import $ from 'jquery';
 import faker from 'faker';
 import Carousel from 'react-bootstrap/Carousel';
 
+import '../../dist/styles.css';
+
 class DishPhotos extends React.Component {
   constructor(props) {
     super(props);

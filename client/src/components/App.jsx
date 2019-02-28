@@ -2,7 +2,6 @@ import React from 'react';
 
 import Header from './Header.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
-import ControlledCarousel from './example.jsx';
 
 import '../../dist/styles.css';
 
@@ -25,8 +24,7 @@ import '../../dist/styles.css';
 const App = () => (
   <div className="container">
     <Header />
-    {/* <ImageCarousel /> */}
-    <ControlledCarousel />
+    <ImageCarousel />
   </div>
 );
 

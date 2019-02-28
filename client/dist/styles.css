@@ -9,7 +9,7 @@
   border-right: 1px solid #e6e6e6;
 }
 
-/* Header Component */
+/* Header */
 .header {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
   display: table;
@@ -84,4 +84,18 @@ a:hover {
   border-spacing: -12px;
   cursor: pointer;
   overflow: hidden;
+}
+
+/* Dish Photos */
+
+.dish {
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+  position: relative;
+  transition: box-shadow 200ms, margin 200ms;
+}
+
+.dishPhoto {
+  width: 190px;
+  height: 179px;
 }
