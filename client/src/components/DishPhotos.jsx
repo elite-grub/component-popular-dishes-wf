@@ -1,28 +1,55 @@
 import React from 'react';
+import $ from 'jquery';
+import faker from 'faker';
 
-import Dish from './Dish.jsx';
+class DishPhotos extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      photos: [],
+    };
 
-// class DishPhotos extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
-//   }
+    this.getPhotos = this.getPhotos.bind(this);
+  }
 
-//   render() {
-//     return (
-//       <div className="dish" index="0">
-//         <h6>increment index</h6>
-//         <Dish />
-//       </div>
-//     );
-//   }
-// }
+  componentDidMount() {
+    this.getPhotos();
+  }
 
-const DishPhotos = () => (
-  <div className="dish" index="0">
-    <h6>increment index</h6>
-    <Dish />
-  </div>
-);
+  getPhotos() {
+    const id = faker.random.number({ min: 1, max: 100 });
+    const getData = (callback) => {
+      $.get({
+        url: `/popular/${id}`,
+        success: data => callback(null, data.links),
+        error: err => callback(err),
+      });
+    };
+
+    getData((err, data) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      this.setState({
+        photos: data,
+      });
+    });
+  }
+
+  render() {
+    const Photos = (this.state.photos).map((photo) => {
+      return <div className="dish" key={photo.photoID}>
+        <img className="dishPhoto" src={photo.photoURL}></img>
+        <a href={photo.dishURL}></a>
+      </div>;
+    });
+    return (
+      <div className="dishes">
+        { Photos }
+      </div>
+    );
+  }
+}
 
 export default DishPhotos;
