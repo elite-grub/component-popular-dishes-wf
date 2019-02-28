@@ -82,4 +82,6 @@ img {
 
 .left-nav .right-nav {
   border-spacing: -12px;
+  cursor: pointer;
+  overflow: hidden;
 }
