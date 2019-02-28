@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import faker from 'faker';
 
 import '../../dist/styles.css';
 
@@ -18,15 +19,10 @@ class Menu extends React.Component {
   }
 
   getMenuURL() {
-    // let id = parseInt(window.location.pathname.slice(10));
-    // if (Number.isNaN(id)) {
-    //   id = 1;
-    // }
-    // console.log('client: ', id);
+    const id = faker.random.number({ min: 1, max: 100 });
     const getData = (callback) => {
       $.get({
-        // url: `/popular/:${id}`,
-        url: '/popular/:1',
+        url: `/popular/${id}`,
         success: data => callback(null, data.menuURL),
         error: err => callback(err),
       });
