@@ -17,7 +17,7 @@ import React from 'react';
 
 const LeftNav = () => (
   <span className="left-nav">
-    <h5>svg tag of left arrow</h5>
+    <h5>svg</h5>
   </span>
 );
 

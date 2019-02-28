@@ -17,7 +17,7 @@ import React from 'react';
 
 const RightNav = () => (
   <span className="right-nav">
-    <h5>svg tag of right arrow</h5>
+    <h5>svg</h5>
   </span>
 );
 

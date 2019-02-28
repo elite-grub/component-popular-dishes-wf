@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Menu from './Menu.jsx';
 import LeftNav from './LeftNav.jsx';
 import RightNav from './RightNav.jsx';
 
@@ -12,13 +13,13 @@ const Header = () => (
       <h2>Popular Dishes</h2>
     </div>
 
-    <div className="menu">
-      <a className="menu-link"
-      href="https://www.google.com/">View Full Menu</a>
-    </div>
+    <Menu />
 
     <div className="carousel-nav">
       <LeftNav />
+    </div>
+
+    <div className="carousel-nav">
       <RightNav />
     </div>
   </div>
