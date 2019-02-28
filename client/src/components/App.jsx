@@ -25,7 +25,7 @@ import '../../dist/styles.css';
 const App = () => (
   <div className="container">
     <Header />
-    <ImageCarousel />
+    {/* <ImageCarousel /> */}
     <ControlledCarousel />
   </div>
 );

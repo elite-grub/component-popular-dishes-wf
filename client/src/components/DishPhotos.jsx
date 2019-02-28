@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import faker from 'faker';
+import Carousel from 'react-bootstrap/Carousel';
 
 class DishPhotos extends React.Component {
   constructor(props) {
@@ -45,9 +46,9 @@ class DishPhotos extends React.Component {
       </div>;
     });
     return (
-      <div className="dishes">
-        { Photos }
-      </div>
+      <Carousel.Item>
+        {Photos}
+      </Carousel.Item>
     );
   }
 }
