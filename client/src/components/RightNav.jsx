@@ -10,16 +10,15 @@ import '../../dist/styles.css';
 
 //   render() {
 //     return (
-//       <span className="right-nav">
-//         <h5>svg tag of right arrow</h5>
-//       </span>
+//       <div className="right-nav">
+//         <img width="18" height="18" src="https://s3-us-west-1.amazonaws.com/elite-grub-photos/Ic_chevron_right_48px.svg"></img>
+//       </div>
 //     );
 //   }
 // }
 
 const RightNav = () => (
-  <div className="left-nav">
-    {/* <svg height="18" width="18" xmlns="https://s3-us-west-1.amazonaws.com/elite-grub-photos/Ic_chevron_right_48px.svg"></svg> */}
+  <div className="right-nav">
     <img width="18" height="18" src="https://s3-us-west-1.amazonaws.com/elite-grub-photos/Ic_chevron_right_48px.svg"></img>
   </div>
 );
