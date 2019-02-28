@@ -38,6 +38,11 @@ h2 {
   line-height: 1.28571em;
 }
 
+.menu {
+  display: table-cell;
+  box-sizing: border-box;
+}
+
 .menu-link {
   color: #0073bb;
   text-decoration: none;
@@ -68,4 +73,13 @@ a:hover {
   margin-bottom: 6px !important;
   margin-left: -12px;
   margin-right: -12px;
+}
+
+/* Nav Arrows */
+img {
+  margin-bottom: -4px;
+}
+
+.left-nav .right-nav {
+  border-spacing: -12px;
 }

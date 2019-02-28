@@ -18,9 +18,15 @@ class Menu extends React.Component {
   }
 
   getMenuURL() {
+    // let id = parseInt(window.location.pathname.slice(10));
+    // if (Number.isNaN(id)) {
+    //   id = 1;
+    // }
+    // console.log('client: ', id);
     const getData = (callback) => {
       $.get({
-        url: 'http://localhost:3030/popular/:1',
+        // url: `/popular/:${id}`,
+        url: '/popular/:1',
         success: data => callback(null, data.menuURL),
         error: err => callback(err),
       });

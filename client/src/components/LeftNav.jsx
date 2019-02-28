@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../dist/styles.css';
+
 // class LeftNav extends React.Component {
 //   constructor(props) {
 //     super(props);
@@ -16,9 +18,9 @@ import React from 'react';
 // }
 
 const LeftNav = () => (
-  <span className="left-nav">
-    <h5>svg</h5>
-  </span>
+  <div className="left-nav">
+    <img height="18" width="18" src="https://s3-us-west-1.amazonaws.com/elite-grub-photos/Ic_chevron_left_48px.svg"></img>
+  </div >
 );
 
 export default LeftNav;

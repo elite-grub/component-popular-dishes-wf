@@ -7,7 +7,8 @@ const { findRestaurant } = require('../database/index.js');
 const app = express();
 const port = 3030;
 
-app.use('/popular', express.static(path.join(__dirname, '../client/dist')));
+// app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/popular/:id', express.static(path.join(__dirname, '../client/dist')));
 app.use(bodyParser.json());
 
 app.get('/popular/:id', (req, res) => {
