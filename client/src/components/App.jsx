@@ -5,27 +5,43 @@ import ImageCarousel from './ImageCarousel.jsx';
 
 import '../../dist/styles.css';
 
-// class App extends React.Component {
-//   constructor() {
-//     super();
-//     this.state = {};
-//   }
+class App extends React.Component {
+  constructor(props, context) {
+    super(props, context);
 
-//   render() {
-//     return (
-//       <div className="container">
-//         <Header />
-//         <ImageCarousel />
-//       </div>
-//     );
-//   }
-// }
+    this.state = {
+      direction: null,
+    };
 
-const App = () => (
-  <div className="container">
-    <Header />
-    <ImageCarousel />
-  </div>
-);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(selectedIndex, e) {
+    this.setState({
+      direction: e.direction,
+    });
+  }
+
+  render() {
+    const { direction } = this.state;
+
+    return (
+      <div className="container">
+        <Header />
+        <ImageCarousel
+          direction={direction}
+          onSelect={this.handleSelect}
+        />
+      </div>
+    );
+  }
+}
+
+// const App = () => (
+//   <div className="container">
+//     <Header />
+//     <ImageCarousel />
+//   </div>
+// );
 
 export default App;

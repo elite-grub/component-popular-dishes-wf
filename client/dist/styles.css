@@ -65,16 +65,6 @@ a:hover {
   white-space: nowrap !important;
 }
 
-/* Image Carousel */
-.carousel {
-  display: table;
-  border-spacing: 12px 0;
-  border-collapse: separate;
-  margin-bottom: 6px !important;
-  margin-left: -12px;
-  margin-right: -12px;
-}
-
 /* Nav Arrows */
 .nav-arrow {
   margin-bottom: -4px;
@@ -86,6 +76,14 @@ a:hover {
   overflow: hidden;
 }
 
+/* Image Carousel */
+.carousel {
+  margin-top: 22px;
+}
+.carousel-item {
+  display: flex;
+}
+
 /* Dish Photos */
 
 .dish {
@@ -93,6 +91,7 @@ a:hover {
   border-radius: 4px;
   position: relative;
   transition: box-shadow 200ms, margin 200ms;
+  margin-right: 10px;
 }
 
 .dishPhoto {
