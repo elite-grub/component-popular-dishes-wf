@@ -6,29 +6,23 @@ import '../../dist/styles.css';
 import DishPhotos from './DishPhotos.jsx';
 
 class ImageCarousel extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      // index: 0,
-      direction: null,
-    };
+    this.state = {};
   }
 
   render() {
-    // const {
-    //   activeIndex, direction, indicators, onSelect,
-    // } = this.props;
     return (
-      <Carousel indicators={false}>
-        {/* {activeIndex}
-        {direction}
-        {indicators}
-        {onSelect} */}
-        {/* {this.props.activeIndex} */}
-        {this.props.direction}
-        {this.props.onSelect}
-        <DishPhotos />
+      <Carousel className="image-carousel" indicators={false} controls={false} interval={null}>
+        <DishPhotos
+          activeIndex={this.props.activeIndex}
+          carouselItemCount={this.props.carouselItemCount}
+          toggleCarousel={this.props.toggleCarousel}
+          direction={this.props.direction}
+          leftNav={this.props.leftNav}
+          rightNav={this.props.rightNav}
+        />
       </Carousel>
     );
   }

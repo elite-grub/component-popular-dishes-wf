@@ -12,7 +12,6 @@ const allPhotos = [
   'https://s3-us-west-1.amazonaws.com/elite-grub-photos/Screen+Shot+2019-02-26+at+1.14.59+AM.jpg',
   'https://s3-us-west-1.amazonaws.com/elite-grub-photos/Screen+Shot+2019-02-24+at+3.27.53+PM.jpg',
   'https://s3-us-west-1.amazonaws.com/elite-grub-photos/Screen+Shot+2019-02-24+at+3.28.11+PM.jpg',
-  'https://s3-us-west-1.amazonaws.com/elite-grub-photos/Screen+Shot+2019-02-24+at+3.28.30+PM.jpg',
 ];
 
 const saveMainRestaurant = () => {
@@ -45,11 +44,11 @@ const saveMainRestaurant = () => {
 const saveFakeData = () => {
   const allData = [];
   for (let id = 2; id <= 100; id++) {
-    const randomPhotoNum = Math.ceil(Math.random() * allPhotos.length);
-    const linkArr = allPhotos.slice(0, randomPhotoNum);
+    // const randomPhotoNum = Math.ceil(Math.random() * allPhotos.length);
+    // const linkArr = allPhotos.slice(0, randomPhotoNum);
     const links = [];
 
-    for (let i = 1; i <= linkArr.length; i++) {
+    for (let i = 1; i <= allPhotos.length; i++) {
       const photo = {};
       photo.photoID = i;
       photo.photoURL = allPhotos[i - 1];

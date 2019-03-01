@@ -66,13 +66,16 @@ a:hover {
 }
 
 /* Nav Arrows */
+.carousel-nav:hover {
+  cursor: pointer;
+}
+
 .nav-arrow {
   margin-bottom: -4px;
 }
 
 .left-nav .right-nav {
   border-spacing: -12px;
-  cursor: pointer;
   overflow: hidden;
 }
 
@@ -82,6 +85,8 @@ a:hover {
 }
 .carousel-item {
   display: flex;
+  max-width: 629px;
+  overflow: hidden;
 }
 
 /* Dish Photos */
