@@ -15,6 +15,7 @@ class App extends React.Component {
       direction: null,
       count: 3,
       menuURL: '',
+      photos: [],
       nextIcon: <a className="right-nav" role="button" data-slide="next"></a>,
       prevIcon: <a className="left-nav" role="button" data-slide="prev"></a>,
     };
@@ -46,6 +47,25 @@ class App extends React.Component {
         menuURL: data,
       });
     });
+
+    const getPhotos = (callback) => {
+      $.get({
+        url: `/popular/${id}`,
+        // url: `http://localhost:3030/popular/${this.props.id}`,
+        success: data => callback(null, data.links),
+        error: err => callback(err),
+      });
+    };
+
+    getPhotos((err, data) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      this.setState({
+        photos: data,
+      });
+    });
   }
 
   toggleCarousel(e) {
@@ -74,7 +94,7 @@ class App extends React.Component {
 
   render() {
     const {
-      index, direction, count, nextIcon, prevIcon, menuURL
+      index, direction, count, nextIcon, prevIcon, menuURL, photos,
     } = this.state;
 
     return (
@@ -96,7 +116,9 @@ class App extends React.Component {
             direction={direction}
             rightNav={nextIcon}
             leftNav={prevIcon}
+            photos={photos}
             toggleCarousel={this.toggleCarousel}
+            getAllData={this.getAllData}
           />
         </div>
       </div>

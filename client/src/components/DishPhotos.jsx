@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Carousel from 'react-bootstrap/Carousel';
 
 import '../../dist/styles.css';
@@ -7,42 +6,12 @@ import '../../dist/styles.css';
 class DishPhotos extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      photos: [],
-    };
-
-    this.getPhotos = this.getPhotos.bind(this);
-  }
-
-  componentDidMount() {
-    this.getPhotos();
-  }
-
-  getPhotos() {
-    const id = Math.floor(Math.random() * 100) + 1;
-    const getData = (callback) => {
-      $.get({
-        url: `/popular/${id}`,
-        // url: `http://localhost:3030/popular/${this.props.id}`,
-        success: data => callback(null, data.links),
-        error: err => callback(err),
-      });
-    };
-
-    getData((err, data) => {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      this.setState({
-        photos: data,
-      });
-    });
+    this.state = {};
   }
 
   render() {
     const idx = this.props.activeIndex;
-    const Photos = (this.state.photos).map((photo) => {
+    const Photos = (this.props.photos).map((photo) => {
       if (idx === 0) {
         if (photo.photoID >= 1 && photo.photoID <= 4) {
           return <div className="dish" key={photo.photoID}>
