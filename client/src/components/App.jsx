@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 import Header from './Header.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
@@ -13,11 +14,38 @@ class App extends React.Component {
       index: 0,
       direction: null,
       count: 3,
+      menuURL: '',
       nextIcon: <a className="right-nav" role="button" data-slide="next"></a>,
       prevIcon: <a className="left-nav" role="button" data-slide="prev"></a>,
     };
 
+    this.getAllData = this.getAllData.bind(this);
     this.toggleCarousel = this.toggleCarousel.bind(this);
+  }
+
+  componentDidMount() {
+    this.getAllData();
+  }
+
+  getAllData() {
+    const id = Math.floor(Math.random() * 100) + 1;
+    const getURL = (callback) => {
+      $.get({
+        url: `/popular/${id}`,
+        success: data => callback(null, data.menuURL),
+        error: err => callback(err),
+      });
+    };
+
+    getURL((err, data) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      this.setState({
+        menuURL: data,
+      });
+    });
   }
 
   toggleCarousel(e) {
@@ -46,7 +74,7 @@ class App extends React.Component {
 
   render() {
     const {
-      index, direction, count, nextIcon, prevIcon,
+      index, direction, count, nextIcon, prevIcon, menuURL
     } = this.state;
 
     return (
@@ -57,6 +85,8 @@ class App extends React.Component {
           direction={direction}
           rightNav={nextIcon}
           leftNav={prevIcon}
+          menuURL={menuURL}
+          getAllData={this.getAllData}
           toggleCarousel={this.toggleCarousel}
         />
         <div className="image-carousel-container">

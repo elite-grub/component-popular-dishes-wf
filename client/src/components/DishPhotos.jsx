@@ -23,6 +23,7 @@ class DishPhotos extends React.Component {
     const getData = (callback) => {
       $.get({
         url: `/popular/${id}`,
+        // url: `http://localhost:3030/popular/${this.props.id}`,
         success: data => callback(null, data.links),
         error: err => callback(err),
       });

@@ -8,13 +8,13 @@ const port = 3030;
 
 app.use(bodyParser.json());
 
-app.use(() => {
-  return (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  };
-});
+// app.use(() => {
+//   return (req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   };
+// });
 
 app.get('/popular/:id', (req, res) => {
   const id = req.params;
