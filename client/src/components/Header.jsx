@@ -1,24 +1,50 @@
 import React from 'react';
 
+import Menu from './Menu.jsx';
 import LeftNav from './LeftNav.jsx';
 import RightNav from './RightNav.jsx';
 
-const Header = () => (
-  <div className="header">
+import '../../dist/styles.css';
 
-    <div className="title">
-      <h2>Popular Dishes</h2>
-    </div>
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
 
-    <div className="menu">
-      <a href="https://www.google.com/">View Full Menu Link</a>
-    </div>
+    this.state = {};
+  }
 
-    <div className="carousel-nav">
-      <LeftNav />
-      <RightNav />
-    </div>
-  </div>
-);
+  render() {
+    return (
+      <div className="header">
+
+        <div className="title">
+          <h2>Popular Dishes</h2>
+        </div>
+
+        <Menu />
+
+        <div className="carousel-nav">
+          <LeftNav
+            activeIndex={this.props.activeIndex}
+            carouselItemCount={this.props.carouselItemCount}
+            toggleCarousel={this.props.toggleCarousel}
+            direction={this.props.direction}
+            leftNav={this.props.leftNav}
+          />
+        </div>
+
+        <div className="carousel-nav">
+          <RightNav
+            activeIndex={this.props.activeIndex}
+            carouselItemCount={this.props.carouselItemCount}
+            toggleCarousel={this.props.toggleCarousel}
+            direction={this.props.direction}
+            rightNav={this.props.rightNav}
+          />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Header;

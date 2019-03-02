@@ -1,26 +1,31 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+
+import '../../dist/styles.css';
 
 import DishPhotos from './DishPhotos.jsx';
 
-// class ImageCarousel extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
-//   }
+class ImageCarousel extends React.Component {
+  constructor(props) {
+    super(props);
 
-//   render() {
-//     return (
-//       <div className="carousel">
-//         <DishPhotos />
-//       </div>
-//     );
-//   }
-// }
+    this.state = {};
+  }
 
-const ImageCarousel = () => (
-  <div className="carousel">
-    <DishPhotos />
-  </div>
-);
+  render() {
+    return (
+      <Carousel className="image-carousel" indicators={false} controls={false} interval={null}>
+        <DishPhotos
+          activeIndex={this.props.activeIndex}
+          carouselItemCount={this.props.carouselItemCount}
+          toggleCarousel={this.props.toggleCarousel}
+          direction={this.props.direction}
+          leftNav={this.props.leftNav}
+          rightNav={this.props.rightNav}
+        />
+      </Carousel>
+    );
+  }
+}
 
 export default ImageCarousel;

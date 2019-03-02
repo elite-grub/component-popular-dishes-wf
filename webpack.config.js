@@ -13,6 +13,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   entry: path.join(__dirname, '/client/src/index.jsx'),

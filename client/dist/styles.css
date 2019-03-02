@@ -1,0 +1,105 @@
+/* App Container */
+.container {
+  display: block;
+  padding: 0 30px 0 0;
+  margin-left: 15px;
+  float: left;
+  /* width: 66.66667%; */
+  width: 629px;
+  border-right: 1px solid #e6e6e6;
+}
+
+/* Header */
+.header {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  display: table;
+  border-spacing: 12px 0;
+  border-collapse: separate;
+  margin-bottom: -12px !important;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.title {
+  color: #d32323;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 0px !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 1.28571em;
+}
+
+.menu {
+  display: table-cell;
+  box-sizing: border-box;
+}
+
+.menu-link {
+  color: #0073bb;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: table-cell;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  white-space: nowrap !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.carousel-nav {
+  display: table-cell;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  white-space: nowrap !important;
+}
+
+/* Nav Arrows */
+.carousel-nav:hover {
+  cursor: pointer;
+}
+
+.nav-arrow {
+  margin-bottom: -4px;
+}
+
+.left-nav .right-nav {
+  border-spacing: -12px;
+  overflow: hidden;
+}
+
+/* Image Carousel */
+.carousel {
+  margin-top: 22px;
+}
+.carousel-item {
+  display: flex;
+  max-width: 629px;
+  overflow: hidden;
+}
+
+/* Dish Photos */
+
+.dish {
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+  position: relative;
+  transition: box-shadow 200ms, margin 200ms;
+  margin-right: 10px;
+}
+
+.dishPhoto {
+  width: 190px;
+  height: 179px;
+}
