@@ -1,6 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-import faker from 'faker';
 
 import '../../dist/styles.css';
 
@@ -19,7 +18,7 @@ class Menu extends React.Component {
   }
 
   getMenuURL() {
-    const id = faker.random.number({ min: 1, max: 100 });
+    const id = Math.floor(Math.random() * 100) + 1;
     const getData = (callback) => {
       $.get({
         url: `/popular/${id}`,

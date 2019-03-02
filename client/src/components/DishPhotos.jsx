@@ -1,6 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-import faker from 'faker';
 import Carousel from 'react-bootstrap/Carousel';
 
 import '../../dist/styles.css';
@@ -20,7 +19,7 @@ class DishPhotos extends React.Component {
   }
 
   getPhotos() {
-    const id = faker.random.number({ min: 1, max: 100 });
+    const id = Math.floor(Math.random() * 100) + 1;
     const getData = (callback) => {
       $.get({
         url: `/popular/${id}`,
@@ -51,7 +50,7 @@ class DishPhotos extends React.Component {
           </div>;
         }
       } else if (idx === 1) {
-        if (photo.photoID >= 4 && photo.photoID <= 8) {
+        if (photo.photoID >= 4 && photo.photoID <= 7) {
           return <div className="dish" key={photo.photoID}>
             <img className="dishPhoto" src={photo.photoURL}></img>
             <a href={photo.dishURL}></a>
