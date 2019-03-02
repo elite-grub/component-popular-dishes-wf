@@ -29,10 +29,11 @@ class App extends React.Component {
   }
 
   getAllData() {
-    const id = Math.floor(Math.random() * 100) + 1;
+    // const id = Math.floor(Math.random() * 100) + 1;
     const getURL = (callback) => {
       $.get({
-        url: `/popular/${id}`,
+        // url: `/popular/${id}`,
+        url: `http://localhost:3030/popular/${this.props.id}`,
         success: data => callback(null, data.menuURL),
         error: err => callback(err),
       });
@@ -50,8 +51,8 @@ class App extends React.Component {
 
     const getPhotos = (callback) => {
       $.get({
-        url: `/popular/${id}`,
-        // url: `http://localhost:3030/popular/${this.props.id}`,
+        // url: `/popular/${id}`,
+        url: `http://localhost:3030/popular/${this.props.id}`,
         success: data => callback(null, data.links),
         error: err => callback(err),
       });
