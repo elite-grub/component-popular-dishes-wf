@@ -21,7 +21,10 @@ class Header extends React.Component {
           <h2>Popular Dishes</h2>
         </div>
 
-        <Menu />
+        <Menu
+          getAllData={this.props.getAllData}
+          menuURL={this.props.menuURL}
+        />
 
         <div className="carousel-nav">
           <LeftNav

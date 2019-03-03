@@ -22,6 +22,8 @@ class ImageCarousel extends React.Component {
           direction={this.props.direction}
           leftNav={this.props.leftNav}
           rightNav={this.props.rightNav}
+          photos={this.props.photos}
+          getAllData={this.props.getAllData}
         />
       </Carousel>
     );
