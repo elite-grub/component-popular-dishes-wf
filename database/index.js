@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Photo } = require('./schema.js');
 const { saveMainRestaurant, saveFakeData } = require('./dataGeneration.js');
 
-mongoose.connect('mongodb://localhost/popularDishes', { useNewUrlParser: true });
+mongoose.connect('mongodb://database/popularDishes', { useNewUrlParser: true });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

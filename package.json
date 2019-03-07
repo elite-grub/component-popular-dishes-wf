@@ -7,7 +7,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "webpack -d -w",
-    "start": "nodemon server/index.js",
+    "newbuild": "webpack -p",
+    "start": "node server/index.js",
     "seed": "nodemon database/index.js"
   },
   "keywords": [],
