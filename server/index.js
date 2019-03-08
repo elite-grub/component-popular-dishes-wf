@@ -14,7 +14,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/popular/:id', (req, res) => {
+app.get('popular/:id', (req, res) => {
   const id = req.params;
   const getIdValue = Object.values(id);
   const newReqId = Number(getIdValue);
