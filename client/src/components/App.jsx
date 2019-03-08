@@ -31,7 +31,8 @@ class App extends React.Component {
   getAllData() {
     const getURL = (callback) => {
       $.get({
-        url: `popular/${this.props.id}`,
+        // url: `popular/${this.props.id}`,
+        url: 'http://ec2-52-53-210-24.us-west-1.compute.amazonaws.com',
         success: data => callback(null, data.menuURL),
         error: err => callback(err),
       });
@@ -49,7 +50,8 @@ class App extends React.Component {
 
     const getPhotos = (callback) => {
       $.get({
-        url: `popular/${this.props.id}`,
+        // url: `popular/${this.props.id}`,
+        url: 'http://ec2-52-53-210-24.us-west-1.compute.amazonaws.com',
         success: data => callback(null, data.links),
         error: err => callback(err),
       });
