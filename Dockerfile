@@ -7,6 +7,7 @@ WORKDIR /src/app
 COPY . /src/app
 
 RUN npm install
+RUN npm install webpack -d
 RUN npm run newbuild
 
 EXPOSE 3030
