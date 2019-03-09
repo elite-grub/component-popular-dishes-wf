@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const { Photo } = require('./schema.js');
 const { saveMainRestaurant, saveFakeData } = require('./dataGeneration.js');
 
-// mongoose.connect('mongodb://database/popularDishes', { useNewUrlParser: true });
 mongoose.connect('mongodb://wf:populardishes123@ds045795.mlab.com:45795/populardishes', { useNewUrlParser: true });
 
 const db = mongoose.connection;
