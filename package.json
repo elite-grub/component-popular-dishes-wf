@@ -7,7 +7,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build": "webpack -d -w",
-    "start": "nodemon server/index.js",
+    "newbuild": "webpack -p",
+    "start": "node server/index.js",
     "seed": "nodemon database/index.js"
   },
   "keywords": [],
@@ -22,7 +23,9 @@
     "mongoose": "^5.4.15",
     "react": "^16.8.3",
     "react-bootstrap": "^1.0.0-beta.5",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -43,8 +46,6 @@
     "jest": "^24.1.0",
     "prop-types": "^15.7.2",
     "sinon": "^7.2.4",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "style-loader": "^0.23.1"
   }
 }

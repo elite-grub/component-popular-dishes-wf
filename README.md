@@ -19,7 +19,7 @@ In a browser, navigate to localhost:3030/ to see Popular Dishes component.
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node 10.13.0
 - etc
 
 ## Development
